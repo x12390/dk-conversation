@@ -26,9 +26,9 @@ def question_and_answer(questions):
     for q in questions:
         os.system('cls')
         print(f"\n====== TOPIC: {q.topic} ======")
-        print(f"\nQUESTION: {q.get_first_text()}")
+        print(f"\nQUESTION: {q.first_text}")
         input("")
-        print(f"ANSWER: {q.get_second_text()}")
+        print(f"ANSWER: {q.second_text}")
         input("\nPress Enter to continue...")
 
     return

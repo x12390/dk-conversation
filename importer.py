@@ -33,7 +33,10 @@ class Configured_Questions:
                             question = value
                         elif firstChar == "a":
                             answer = value
-                            card = Card(section, question, answer)
+                            card = Card()
+                            card.topic = section
+                            card.first_text = question
+                            card.second_text = answer
                             #print(f"Append new card: {section}, {question}, {answer}")
                             questions.append(card)
 
@@ -54,7 +57,10 @@ class Configured_Questions:
                     question = value
                 elif firstChar == "a":
                     answer = value
-                    card = Card(topic_section, question, answer)
+                    card = Card()
+                    card.topic = topic_section
+                    card.first_text = question
+                    card.second_text = answer
                     #print(f"Append new card: {topic_section}, {question}, {answer}")
                     questions.append(card)
         return questions
